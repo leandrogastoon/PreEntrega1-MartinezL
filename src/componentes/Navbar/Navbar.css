@@ -1,4 +1,7 @@
-.primero{
-    background-color: grey;
-    color: white;
+body{
+    background-color: #cccccc;
+}
+.navbar{
+    width: 100%;
+    height: 70px;
 }
