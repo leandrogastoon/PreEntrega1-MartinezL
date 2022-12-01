@@ -1,7 +1,5 @@
 import React from "react";
-import ItemListContainer from '../ItemListContainer/ItemListContainer.js';
-import LinksNav from "../LinksNav/LinksNav.js";
-
+import CartWidget from "../CartWidget/CartWidget.js";
 
 
 import './Navbar.css';
@@ -9,10 +7,7 @@ import './Navbar.css';
 const Navbar = () => {
     return (
         <div className="navbar">
-            <LinksNav/>
-            <ItemListContainer titulo= "titulo agregado con prop">
-                <div>children</div>
-            </ItemListContainer>
+            <CartWidget />
         </div>
      );
 };

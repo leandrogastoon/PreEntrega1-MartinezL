@@ -1,15 +1,17 @@
-import React from 'react';
+import logo from './logo.svg';
 import './App.css';
 
-import Navbar from './componentes/Navbar/Navbar';
-import ItemListContainer from './componentes/ItemListContainer/ItemListContainer.js'
+import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 
-export default function App() {
+function App() {
   return (
-    <div>
-       <Navbar/>
+    <div className="App">
+      <ItemListContainer titulo= "titulo agregado con prop">
+                <div>children</div>
+      </ItemListContainer>
     </div>
   );
 }
 
+export default App;
 

@@ -1,3 +1,10 @@
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(22, 22, 22);
+}
+
 .contCarrito{
     display: flex;
     justify-content: center;
@@ -19,4 +26,36 @@
 
 .contCarrito svg{
     color: white;
+}
+
+
+.contItems{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(22, 22, 22);
+    width: 100%;
+}
+
+.titulo{
+    margin-left: 20px;  
+    color: white; 
+}
+
+.items{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.items a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.items a{
+    text-decoration: none;
+    color: white
 }
