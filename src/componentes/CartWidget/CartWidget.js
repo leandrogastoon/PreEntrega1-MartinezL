@@ -1,11 +1,12 @@
 import React from "react";
 
 import './CartWidget.css'
+import logo from './img/logo_afa.png';
 
 const CartWidget = () => {
     return (
         <div className="contenedor">
-            <h2 className="titulo">NIKE</h2>
+            <img src={logo} className="logo" />
             <div className="contItems">
                 <ul className="items">
                     <li><a href="#">Botines</a></li>

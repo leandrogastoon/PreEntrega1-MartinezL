@@ -1,0 +1,38 @@
+.contenedorBotones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contSumarPrenda{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80px;
+    height: 23px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    margin-right: 10px;
+}
+
+.botonRestar, .botonSumar{
+    border: none;
+    background-color: whitesmoke;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.botonAgregarCarrito{
+    border: none;
+    background-color: whitesmoke;
+    font-weight: bold;
+    width: 130px;
+    height: 25px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+

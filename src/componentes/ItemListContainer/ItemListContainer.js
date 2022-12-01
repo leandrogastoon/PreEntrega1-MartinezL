@@ -1,6 +1,8 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 
+import ItemCount from "../ItemCount/ItemCount";
+
 import './ItemListContainer.css';
 
 const ItemListContainer = ({titulo, children}) => {
@@ -10,6 +12,8 @@ const ItemListContainer = ({titulo, children}) => {
             
             <h1>{titulo}</h1>
             {children}
+
+            <ItemCount />
             
         </div>
           
