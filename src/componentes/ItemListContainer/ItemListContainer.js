@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../Navbar/Navbar";
 
 import ItemCount from "../ItemCount/ItemCount";
@@ -17,7 +17,8 @@ const items = [
         name : "CAMISETA TITULAR ARGENTINA 22",
         descripcion : "LA NUEVA CAMISETA DE ARGENTINA PARA LOS HINCHAS DE LA SELECCIÓN , HECHA CON MATERIAL RECICLADO 100% Argentina. Diseñada para los hinchas, ofrece comodidad en todo momento gracias a su tejido suave con tecnología de absorción AEROREADY. Los detalles en la parte interior trasera del cuello están inspirados en la bandera nacional que los jugadores representan con tanto orgullo. Un producto hecho parcialmente con contenido reciclado generado a partir de desechos de producción, tales como recortes de tela, y desechos domésticos postconsumo, para evitar un mayor impacto ambiental al producir contenido virgen.",
         stock : 100,
-        img : camtitular
+        img : camtitular,
+        precio : 28000
     },
 
     {
@@ -25,7 +26,8 @@ const items = [
         name : "CAMISETA ALTERNATIVA ARGENTINA 22",
         descripcion : "UNA CAMISETA CÓMODA PARA EL ESCENARIO MÁS IMPORTANTE, HECHA CON MATERIALES RECICLADOS La camiseta alternativa de Argentina representa la igualdad de género. Luce tonos morados vibrantes y estampados llamativos inspirados en el Sol de Mayo de la bandera nacional. Creada para envolver a los hinchas en comodidad, esta camiseta incorpora tecnología de absorción AEROREADY. Luce el escudo del club tejido. Hecho con materiales 100 % reciclados, este producto representa solo una de nuestras soluciones para ayudar a acabar con los residuos plásticos.",
         stock : 100,
-        img : camsuplente
+        img : camsuplente,
+        precio : 25000
     },
     
     {
@@ -33,7 +35,8 @@ const items = [
         name : "CAMISETA PREPARTIDO ARGENTINA 22",
         descripcion : "UNA CAMISETA DE CALENTAMIENTO DE LA SELECCIÓN ARGENTINA HECHA CON MATERIALES RECICLADOS Calentá con estilo. Una fusión de los clásicos colores de suplente y la energía de los 90, esta es la camiseta que usan los jugadores de Argentina antes del silbato inicial. La tecnología AEROREADY absorbe la humedad para mantener su piel seca y cómoda en cada movimiento en la cancha. Luce el escudo del club tejido en el pecho para destacar lo que sentís por el equipo. Hecho con materiales 100% reciclados, este producto representa solo una de nuestras soluciones para acabar con los residuos plásticos.",
         stock : 100,
-        img : camprepartido
+        img : camprepartido,
+        precio : 20000
     }
 ]
 
@@ -46,20 +49,29 @@ const ItemListContainer = ({titulo, children}) => {
             {children}
 
             <ItemCount />
+            {/* /* {productos.map(post => <div>{post.name}</div>)} */}
             <ItemList items={items} />
              
-        </div>
+        </div> 
     );
 };
 
-const promesa = new Promise((resolve) => {  //probar hacerlo en un useEffect
-    setTimeout(() => {
-        resolve (items)
-    }, 3000);
-})
+// const [productos, setProductos] = useState([]);
 
-promesa.then((res) =>{
-    console.log(res)
-})
+// useEffect(() => {
+//         const promesa = new Promise((resolve) => {  //probar hacerlo en un useEffect (<ItemList items={items} />  es lo que necesito mostrar)
+//         setTimeout(() => {
+//             resolve (items)
+//         }, 3000);
+//     })
+
+//     promesa.then((res) =>{
+//     console.log(res)
+//     })
+
+//     promesa.then((items) => setProductos(items));
+// }, [])
+
+
 
 export default ItemListContainer;
