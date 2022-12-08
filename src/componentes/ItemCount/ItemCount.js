@@ -2,18 +2,18 @@ import React, { useState } from "react";
 
 import '../ItemCount/ItemCount.css';
 
-const ItemCount = () => {
-    const [prenda, setAgregar] = useState(0);
+const ItemCount = ({items}) => {
+    const [agregar, setAgregar] = useState(0);
 
     const botonSumarPrenda = () => { /*agregar condicional para cantidad de stock*/
-        setAgregar(prenda + 1);
+        setAgregar(agregar + 1);
     };
 
     const botonRestarPrenda = () => {
-        if (prenda == 0) {
+        if (agregar === 0) {
             console.log('nada');
         } else{
-            setAgregar(prenda -1);
+            setAgregar(agregar -1);
         };
     };
     
@@ -22,7 +22,7 @@ const ItemCount = () => {
         <div className="contenedorBotones">
             <div className="contSumarPrenda">
                 <button className="botonRestar" onClick={botonRestarPrenda}>-</button>
-                <p>{prenda}</p>
+                <p>{agregar}</p>
                 <button className="botonSumar" onClick={botonSumarPrenda}>+</button>
             </div>      
             <button className="botonAgregarCarrito">Agregar al carrito</button>
